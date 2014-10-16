@@ -47,7 +47,7 @@ public class TestaPessoa {
 //		List array = new ArrayList();
 //		for(int i=0; i<3;i++){
 //			System.out.println("Digite um id, Nome e CPF: ");
-//			Pessoa p4 = new Pessoa(t.nextInt(), t.nextLine(), t.nextLine());
+//			Pessoa p4 = new Pessoa(t.nextInt(), t.nextLine() + t.nextLine(), t.nextLine());
 //			array.add(p4);
 //		}
 //		

@@ -37,7 +37,7 @@ public class Pessoa {
 	}
 	
 	//Contrutor
-	public Pessoa(Integer id, String nome, String cpf) {
+	public Pessoa(Integer id, String nome, String cpf, String tel) {
 		this.id = id;
 		this.nome = nome;
 		this.cpf = cpf;

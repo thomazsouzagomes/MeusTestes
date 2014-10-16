@@ -1,5 +1,6 @@
 package Divus;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -17,13 +18,23 @@ public class TestaPessoa {
 		
 		List arr = new ArrayList();
 		arr.add(p);arr.add(p1);arr.add(p2);
-		int aux = 0;
-		for(Object obj : arr){
-			if(((Pessoa)obj).getTel() == null){
-				arr.remove(obj);
+//		int aux = 0;
+//		for(Object obj : arr){
+//			if(((Pessoa)obj).getTel() == null){
+//				arr.remove(obj);
+//			}
+//			aux++;
+//		}
+		
+		Iterator i = arr.iterator();
+		System.out.println(arr.size());
+		while(i.hasNext()){
+			Pessoa p6 = (Pessoa) i.next();
+			if(p6.getTel() == null){
+				i.remove();
 			}
-			aux++;
 		}
+		System.out.println(arr.size());
 		//Sem Construtor
 //		Pessoa p1 = new Pessoa();
 //		p1.setNome("gostoso");

@@ -4,8 +4,13 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.NavigableSet;
 import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class TestaEscola {
 	public static void main(String[] args) {
@@ -48,7 +53,25 @@ public class TestaEscola {
 			}
 		}
 		
+//		NavigableSet<Aluno> alunosSet = new TreeSet<>();
+		NavigableSet<Aluno> alunosSet = new TreeSet<>(new ComparadorPorNome());
 		
+		alunosSet.add(a1);
+		alunosSet.add(a2);
+		
+		for(Object o : alunosSet){
+			System.out.println(((Aluno) o).getNome());
+		}
+		
+		System.out.println("******************************************");
+		
+		Map<Turma, Set<Aluno>> turmaAluno = new LinkedHashMap<>();
+		
+		for(Turma tKey : turmaAluno.keySet()){
+			for(Aluno aluno : turmaAluno.get(tKey)){
+				System.out.println(aluno.getNome());
+			}
+		}
 	}
 
 }

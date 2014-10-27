@@ -1,7 +1,7 @@
 package Divus;
 
-public class Aluno {
-	private long id;
+public class Aluno implements Comparable<Aluno>{
+	private Long id;
 	private String nome;	
 	private Turma turma;
 
@@ -9,6 +9,11 @@ public class Aluno {
 		this.id = id;
 		this.nome = nome;
 		this.turma = turma;
+	}
+	
+	public int compareTo(Aluno a){
+//		Aluno a = (Aluno) o;
+		return this.getId().compareTo(a.getId());
 	}
 	
 	@Override
@@ -33,13 +38,11 @@ public class Aluno {
 		return true;
 	}
 
-
-
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -58,7 +61,4 @@ public class Aluno {
 	public void setTurma(Turma turma) {
 		this.turma = turma;
 	}
-	
-	
-
 }
